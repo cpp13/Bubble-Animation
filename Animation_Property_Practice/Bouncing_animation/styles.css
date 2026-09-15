@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+  display: flex;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  /* background-color: aqua; */
+}
+
+.circle {
+  border-radius: 50%;
+  animation-name: wave;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  /* animation-play-state: paused; */
+}
+
+.circle:hover{
+    animation-play-state: paused;
+}
+
+.circle_1 {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  animation-delay: 0s;
+}
+.circle_2 {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    animation-delay: 0.5s;
+}
+.circle_3 {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    animation-delay: 1s;
+}
+.circle_4 {
+    width: 40px;
+    height: 40px;
+    background-color: indigo;
+    animation-delay: 0.5s;
+}
+
+.circle_5 {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    animation-delay: 1s;
+}
+
+@keyframes wave{
+    from{
+        /* transform: translateY(0px); */
+        transform: translateX(0px);
+    }
+
+    to{
+        /* transform: translateY(-100px); */
+        transform: translateX(-100px);
+    }
+}

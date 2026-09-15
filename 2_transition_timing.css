@@ -1,0 +1,51 @@
+.box {
+  width: 90px;
+  height: 50px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body:hover .box {
+  background-color: blue;
+  color: yellow;
+  width: 300px;
+}
+
+.trans {
+  transition-duration: 2s;
+  /* transition-property: all; */
+  /* transition: width 1s ease-in 1s, background-color 0.5s ; */
+  /* transition: width 1s ease-in 0.5s ;  */
+  /* 1s is transition-duration and 0.5s is transition-delay and if there is no transition-duration than just give 0s */
+
+  transition: all 1s ease-in 3s; /* Shorthand property combines four of the transition properties into a single property.*/
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+  transition-timing-function: cubic-bezier(0.12, 0.8, 0.7, -0.37);
+}
+
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.step-start {
+  transition-timing-function: step-start;
+}
+
+.step-end {
+  transition-timing-function: step-end;
+}
+
+.steps {
+  transition-timing-function: steps(5);
+}

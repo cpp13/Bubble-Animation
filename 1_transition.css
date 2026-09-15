@@ -1,0 +1,36 @@
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  line-height: 9rem;
+  font-size: 24px;
+  margin: 20px;
+  padding: 10px;
+  /* transition-duration: 1.5s; */
+  /* Do not provide transition states in normal classes or ids 
+  instead of pseudo-classes as the transition end abruptly */
+}
+
+.box:hover {
+  background-color: blue;
+  color: red;
+  height: 300px;
+  /* padding: 20px; */
+  /* transition-duration: 1.5s; */
+}
+
+.trans {
+  /* Transiition-duration */
+  transition-duration: 0.5s;
+  /* transition-property: color; */
+  /* transition-property: background-color; */
+  /* transition-property: background-color, color; */
+  transition-property: all; /* By default all if provided */
+  /* Transiition-delay */
+  transition-delay: 3s;
+  /* Always provide transition states in normal classes or ids 
+  and do not provide them in pseudo-classes as the transition end abruptly */
+}

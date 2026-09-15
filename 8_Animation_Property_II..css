@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ball{
+    width:150px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 50%;
+    background: lightblue;
+    
+    /* animation-name */
+    animation-name: slide;
+    
+    /* animation-duration */
+    animation-duration: 1s;
+    
+    /* animation-delay */
+    animation-delay: 1s;
+    
+    /* animation-timing-function */
+    animation-timing-function: ease-in-out;
+    
+    /* animation-iteration-count */
+    /* animation-iteration-count: 3; */
+    /* animation-iteration-count: infinite; */
+    
+    /* animation-direction */
+    /* animation-direction: reverse;
+    /* animation-direction: alternate-reverse; */
+    /* animation-direction: alternate; */
+    
+    /* animation-play-state */
+    /* animation-play-state: paused; */
+    
+    /* animation-fill-mode */
+    /* Backwards: Animation will start from 0% state i.e. lightgreen goes to 100% i.e. lightpink but after the animation ends it goes back to state before 0% i.e. lightblue */
+    animation-fill-mode: backwards; 
+    
+    /* Forwards: Animation will start from before 0% state i.e. lightblue than goes to 0% i.e. lightgreen but after the animation ends it stops at 100% state i.e. lightpink and 350px  */
+    animation-fill-mode: forwards;
+    
+    /* Both: Animation will start from 0% state i.e. lightgreen but after the animation ends it stops at 100% state i.e. pink and 350px  */
+    animation-fill-mode: both;   
+}
+
+body:hover .ball{
+    animation-play-state: paused;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0%);
+        background-color: lightgreen;
+    }
+
+    to{
+transform: translateX(300px);
+background-color: lightpink;
+    }
+}

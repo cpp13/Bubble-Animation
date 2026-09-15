@@ -1,0 +1,23 @@
+.box {
+  margin: auto;
+  margin-top: 100px;
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  font-size: 24px;
+  color: azure;
+  text-align: center;
+  border: solid black;
+  border-width: 10px 5px;
+}
+
+body:hover .box {
+    /* Combining the properties */
+    /* Order Matters in which you write the tranformation properties */
+    /* transform: rotate(120deg) translate(100px); */
+    /* transform: translate(100px) rotate(120deg); */
+    /* Combined Properties */
+    /* transform: scale(0.5) translate(100px) rotate(120deg) ; */
+    transform: translate(100px) rotate(120deg) scale(0.5);
+}

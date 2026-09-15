@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.box-1 {
+  background: linear-gradient(to right, #ffc3a0, #ffafbd);
+  animation-name: slideBoxOne;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  z-index: -1;
+}
+
+.box-2 {
+  background: linear-gradient(to right, #a8ff78, #78ffd6);
+  animation-name: slideBoxTwo;
+  animation-delay: 1s;
+  z-index: 1;
+}
+
+.box-3 {
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+  animation-name: slideBoxThree;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  z-index: 2;
+}
+
+@keyframes slideBoxOne {
+  0% {
+    transform: translate(0px) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(300px) scale(1);
+  }
+
+  85% {
+    transform: translate(300px) scale(1);
+  }
+
+  100% {
+    transform: translate(300px) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideBoxTwo {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(180deg) scale(1.6);
+  }
+}
+
+@keyframes slideBoxThree {
+  0% {
+    transform: translate(0px) scale(1);
+  }
+
+  100% {
+    transform: translate(-280px) scale(1);
+    opacity: 0.5;
+  }
+}

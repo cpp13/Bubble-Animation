@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  border-radius: 50%;
+  background: conic-gradient(red, green, blue);
+
+  /* animation-name */
+  animation-name: slide;
+
+  /* animation-duration */
+  animation-duration: 1s;
+
+  /* animation-delay */
+  animation-delay: 1s;
+
+  /* animation-timing-function */
+  animation-timing-function: ease-in-out;
+
+  /* animation-iteration-count */
+  /* animation-iteration-count: 3; */
+  animation-iteration-count: infinite;
+
+  /* animation-direction */
+  animation-direction: reverse;
+  animation-direction: alternate-reverse;
+  animation-direction: alternate;
+
+  animation-fill-mode: backwards;
+
+  /* animation-play-state */
+  animation-play-state: running;
+
+  animation: slide 1s ease-in-out 1s infinte alternate;
+}
+
+body:hover .ball {
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  /* from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(300px);
+  } */
+
+  0%{
+    transform: translateY(0%) rotate(60deg);
+  }
+
+  40%{
+    transform: translateY(300px) rotate(90deg);
+  }
+
+  60%{
+    transform: translate(300PX, 300PX) rotate(120deg) scale(1.2);
+  }
+
+  80%{
+    transform: translate(300px, 0%) rotate(240deg) scale(1.4);
+  }
+
+  100%{
+    transform: translate(0%, 0%) rotate(-360deg) scale(1.6);
+  }
+}
