@@ -59,6 +59,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+
 }
 
 h1::after {
@@ -67,9 +68,17 @@ h1::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 0;
   height: 3px;
   background-color: #fbfcfd;
+  transition: 0.5s ease-in-out;
+  
+}
+
+h1:hover::after{
+  width: 100%;
+  
 }
 
 h1::before {
@@ -80,6 +89,7 @@ h1::before {
   background-color: rgba(0, 0, 0, 0);
   top: 0;
   left: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .side-bar {
@@ -141,7 +151,7 @@ h1::before {
 
 .bubbles img {
   animation-name: floatUp;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -151,46 +161,39 @@ h1::before {
 
 .bubbles img:nth-child(1) {
   width: 85px;
-  /* animation-name: floatUp_1; */
   animation-delay: 1s;
 }
 
 .bubbles img:nth-child(2) {
   width: 25px;
-  /* animation-name: floatUp_2; */
   animation-delay: 0s;
   
 }
 
 .bubbles img:nth-child(3) {
-  /* animation-name: floatUp_3; */
   width: 55px;
   animation-delay: 2s;
   
 }
 
 .bubbles img:nth-child(4) {
-  /* animation-name: floatUp_4; */
   width: 45px;
   animation-delay: 3s;
   
 }
 
 .bubbles img:nth-child(5) {
-  /* animation-name: floatUp_5; */
   width: 65px;
   animation-delay: 2s;
 }
 
 .bubbles img:nth-child(6) {
-  /* animation-name: floatUp_6; */
   width: 50px;
   animation-delay: 4s;
   
 }
 
 .bubbles img:nth-child(7) {
-  /* animation-name: floatUp_7; */
   width: 75px;
   animation-delay: 4.5s;
 }
@@ -218,50 +221,3 @@ h1::before {
     opacity: 0;
   }
 }
-/* @keyframes floatUp_1 {
-  0% {
-    transform: translateY(0px);
-  }
-
-  44%{
-    opacity: 0.8;
-
-  }
-
-  66% {
-    opacity: 0.6;
-  }
-
-  80% {
-    opacity: 0.4;
-  }
-
-  100% {
-    transform: translateY(-450px);
-    opacity: 0;
-  }
-}
-
-@keyframes floatUp_2 {
-  0% {
-    transform: translateY(0px);
-  }
-
-  44%{
-    opacity: 0.8;
-
-  }
-
-  66% {
-    opacity: 0.6;
-  }
-
-  80% {
-    opacity: 0.4;
-  }
-
-  100% {
-    transform: translateY(-450px);
-    opacity: 0;
-  }
-} */
