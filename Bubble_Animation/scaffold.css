@@ -129,76 +129,69 @@ h1::before {
   margin-bottom: 30px;
 }
 
-.bubbles img {
-  width: 50px;
-}
 
-.bubbles {
+.bubbles{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  /* bottom: -600px; */
-  bottom: -70px;
-  /* bottom: 50px; */
-  animation-name: floatUp;
+  bottom: 20px;
+}
+
+.bubbles img {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-play-state: running;
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .bubbles img:nth-child(1) {
+  animation-name: floatUp_1;
   width: 85px;
-  /* margin-top: 150px; */
-  animation-duration: 10s;
-  animation-delay: 5s;
+  animation-delay: 1s;
 }
 
 .bubbles img:nth-child(2) {
   width: 25px;
-  /* animation-duration: 9s;
-  animation-delay: 5s; */
+
 }
 
 .bubbles img:nth-child(3) {
   width: 55px;
-  /* margin-top: 350px; */
+
 }
 
 .bubbles img:nth-child(4) {
   width: 45px;
-  /* margin-top: 650px; */
+
 }
 
 .bubbles img:nth-child(5) {
   width: 65px;
-  /* margin-top: 350px; */
 }
 
 .bubbles img:nth-child(6) {
   width: 50px;
-  /* margin-top: 750px; */
+
 }
 
 .bubbles img:nth-child(7) {
   width: 75px;
-  /* margin-top: 950px; */
 }
 
-@keyframes floatUp {
+@keyframes floatUp_1 {
   0% {
     transform: translateY(0px);
   }
 
-  80% {
+  66% {
     opacity: 0.8;
   }
 
-  85% {
+  80% {
     opacity: 0.4;
   }
 
